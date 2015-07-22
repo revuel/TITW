@@ -1,0 +1,16 @@
+{
+    "contents" : "#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#\n\n  # Integrating technologies\n  \n  \n  # Rshiny + Jquery\n\n  # Example 001: Showing Alert after withProgress has finished loading\n  \n\n  # Author: Miguel Revuelta Espinosa, revuel@github\n  # Date: 2015 07 14\n\n#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#\n\n# · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·\n#   Install packages\n# · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·\npackages.list <- c(\"shiny\", \"dygraphs\", \"datasets\")\nnew.packages <- packages.list[!(packages.list %in% installed.packages()\n                                   [,\"Package\"])]\nif(length(new.packages)) install.packages(new.packages)\n\n\n# · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·\n#   Link libraries\n# · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·\nlibrary(shiny)\nlibrary(dygraphs)\nlibrary(datasets)\n\n\n# · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·\n#   Variables\n# · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·\n\n",
+    "created" : 1437142805863.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2966974792",
+    "id" : "9EBE023E",
+    "lastKnownWriteTime" : 1436886948,
+    "path" : "~/TITW/RShiny.Jquery-001/global.R",
+    "project_path" : "global.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

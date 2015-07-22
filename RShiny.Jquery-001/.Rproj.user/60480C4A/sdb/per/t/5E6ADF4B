@@ -1,0 +1,16 @@
+{
+    "contents" : "#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#\n\n# Integrating technologies\n\n\n# Rshiny + Jquery\n\n# Example 001: Showing Alert after withProgress has finished loading\n\n\n# Author: Miguel Revuelta Espinosa, revuel@github\n# Date: 2015 07 14\n\n#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#\n\nshinyServer(function(input, output) {\n  \n  predicted <- reactive({\n    hw <- HoltWinters(ldeaths)\n    predict(hw, n.ahead = input$months, \n            prediction.interval = TRUE,\n            level = as.numeric(input$interval))\n  })\n  \n  output$dygraph <- renderDygraph({\n    \n    input$reload\n      \n    withProgress(message = 'Generating data', detail = \"part 0\", value = 0, {\n        for (i in 1:10) {\n          dat <- rbind(data.frame(x = rnorm(1), y = rnorm(1)))\n          incProgress(0.1, detail = paste(\"part\", i))\n          Sys.sleep(0.2)\n        }\n        #setProgress(1)\n      })\n    \n    dygraph(nhtemp, main = \"New Haven Temperatures\") %>% \n      dyRangeSelector(height = 30, strokeColor = \"red\")\n    })\n})",
+    "created" : 1437142875935.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3810283998",
+    "id" : "5E6ADF4B",
+    "lastKnownWriteTime" : 1436904680,
+    "path" : "~/TITW/RShiny.Jquery-001/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

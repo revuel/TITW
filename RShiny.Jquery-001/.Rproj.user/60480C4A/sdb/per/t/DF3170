@@ -1,0 +1,16 @@
+{
+    "contents" : "#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#\n\n# Integrating technologies\n\n\n# Rshiny + Jquery\n\n# Example 001: Showing Alert after withProgress has finished loading\n\n\n# Author: Miguel Revuelta Espinosa, revuel@github\n# Date: 2015 07 14\n\n#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#\n\nshinyUI(fluidPage(\n  \n  tags$head(tags$script(src=\"js/myFunctions.js\")\n            ),\n  \n  titlePanel(\"Showing Alert after withProgress\"),\n  \n  sidebarLayout(\n    \n    sidebarPanel(\n      actionButton(\"reload\", \"Reload!\")\n    ),\n    \n    mainPanel(\n      dygraphOutput(\"dygraph\")\n    )\n    \n  )\n))",
+    "created" : 1437142875158.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1569991391",
+    "id" : "DF3170",
+    "lastKnownWriteTime" : 1436996688,
+    "path" : "~/TITW/RShiny.Jquery-001/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
